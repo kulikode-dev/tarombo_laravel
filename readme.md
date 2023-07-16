@@ -1,9 +1,9 @@
 ![Laravel](https://laravel.com/assets/img/components/logo-laravel.svg)
 
-<h1 align="center">Genealogy Application</h1>
+<h1 align="center">Genealogy Application (Updated to Laravel 10 Version)</h1>
 
-[![Build Status](https://travis-ci.org/nafiesl/silsilah.svg?branch=master)](https://travis-ci.org/nafiesl/silsilah)
-[![Coverage Status](https://coveralls.io/repos/github/nafiesl/silsilah/badge.svg?branch=master)](https://coveralls.io/github/nafiesl/silsilah?branch=master)
+[![Build Status](https://travis-ci.org/kulikode-dev/tarombo_laravel.svg?branch=master)](https://travis-ci.org/kulikode-dev/tarombo_laravel)
+[![Coverage Status](https://coveralls.io/repos/github/kulikode-dev/tarombo_laravel/badge.svg?branch=master)](https://coveralls.io/github/kulikode-dev/tarombo_laravel?branch=master)
 
 > **Development in progress**  
 > In development progress, any changes of table structure **will be updated** directly to corresponding **migration file**.
@@ -54,13 +54,13 @@ This application uses Bahasa Indonesia and English based on `config.locale`.
 
 This application can be installed on local server and online server with these specifications :
 
-1. PHP 7.3 (and meet other [Laravel 8.x server requirements](https://laravel.com/docs/8.x/deployment#server-requirements)),
+1. PHP 8.2 (and meet other [Laravel 10.x server requirements](https://laravel.com/docs/10.x/deployment#server-requirements)),
 2. MySQL or MariaDB database,
 3. SQlite (for automated testing).
 
 ### Installation Steps
 
-1. Clone the repo : `git clone https://github.com/nafiesl/silsilah.git`
+1. Clone the repo : `git clone https://github.com/kulikode-dev/tarombo_laravel.git`
 2. `cd silsilah`
 3. `composer install`
 4. `cp .env.example .env`
@@ -112,4 +112,5 @@ This family tree view is using the [Horizontal Family Tree CSS](https://codepen.
 
 ## License
 
+Tarombo is forked and modified from Silsilah project.
 Silsilah project is open-sourced software licensed under the [MIT license](LICENSE).
