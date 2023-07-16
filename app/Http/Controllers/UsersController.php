@@ -10,7 +10,8 @@ use App\UserMetadata;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Ramsey\Uuid\Uuid;
-use Storage;
+// use Storage;
+use Illuminate\Support\Facades\Storage;
 
 class UsersController extends Controller
 {
@@ -152,7 +153,7 @@ class UsersController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(UpdateRequest $request, User $user)
+    public function updateUser(UpdateRequest $request, User $user)
     {
         $userAttributes = $request->validated();
         $user->update($userAttributes);
@@ -209,10 +210,11 @@ class UsersController extends Controller
         $request->validate([
             'photo' => 'required|image|max:200',
         ]);
-
-        if (Storage::exists($user->photo_path)) {
-            Storage::delete($user->photo_path);
-        }
+        !is_null($user->photo_path) && Storage::delete($user->photo_path);
+        
+        // if (Storage::exists($user->photo_path)) {
+        //     Storage::delete($user->photo_path);
+        // }
 
         $user->photo_path = $request->photo->store('images');
         $user->save();
