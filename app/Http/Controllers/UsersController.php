@@ -153,7 +153,7 @@ class UsersController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function updateUser(UpdateRequest $request, User $user)
+    public function update(UpdateRequest $request, User $user)
     {
         $userAttributes = $request->validated();
         $user->update($userAttributes);
@@ -211,7 +211,7 @@ class UsersController extends Controller
             'photo' => 'required|image|max:200',
         ]);
         !is_null($user->photo_path) && Storage::delete($user->photo_path);
-        
+
         // if (Storage::exists($user->photo_path)) {
         //     Storage::delete($user->photo_path);
         // }
